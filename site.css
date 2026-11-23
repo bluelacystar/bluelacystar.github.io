@@ -166,3 +166,7 @@ h1, h2 { font-weight: 400; }
 .drawn-title { margin: 36px 0 10px; line-height: 0; }
 .drawn-title img { width: 170px; height: auto; display: block; }
 @media (max-width: 480px) { .drawn-title img { width: 130px; } }
+
+.about-photo { float: right; width: 290px; margin: 6px 0 18px 28px; }
+.about-photo img { width: 100%; height: auto; display: block; border: 1.5px solid #4f4f4f; border-radius: 3px 6px 4px 5px / 5px 3px 6px 4px; box-shadow: 0 6px 18px rgba(0,0,0,.12); }
+@media (max-width: 640px) { .about-photo { float: none; width: auto; max-width: 420px; margin: 0 auto 22px; } }
