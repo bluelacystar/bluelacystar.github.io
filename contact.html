@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Contact William Menjivar</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400&display=swap">
+<link rel="stylesheet" href="site.css">
+</head>
+<body class="paper">
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <filter id="sq0"><feTurbulence type="fractalNoise" baseFrequency="0.02" numOctaves="2" seed="1"/><feDisplacementMap in="SourceGraphic" scale="2.6"/></filter>
+    <filter id="sq1"><feTurbulence type="fractalNoise" baseFrequency="0.02" numOctaves="2" seed="7"/><feDisplacementMap in="SourceGraphic" scale="2.6"/></filter>
+    <filter id="sq2"><feTurbulence type="fractalNoise" baseFrequency="0.02" numOctaves="2" seed="13"/><feDisplacementMap in="SourceGraphic" scale="2.6"/></filter>
+    <filter id="sq3"><feTurbulence type="fractalNoise" baseFrequency="0.02" numOctaves="2" seed="21"/><feDisplacementMap in="SourceGraphic" scale="2.6"/></filter>
+  </defs>
+</svg>
+<div class="frame" aria-hidden="true"></div>
+<div class="page">
+<header class="top drawn">
+  <a class="home-link" href="index.html"><img class="squiggle" src="name.png" alt="William Menjivar, back to the front page" style="--w:912"></a>
+  <nav class="drawn-nav" aria-label="Site">
+    <a href="resume.html"><img class="squiggle" src="nav-resume.png" alt="Résumé" style="--w:232"></a>
+    <a href="work.html"><img class="squiggle" src="nav-work.png" alt="Work" style="--w:199"></a>
+    <a href="about.html"><img class="squiggle" src="nav-about.png" alt="About" style="--w:203"></a>
+    <a href="contact.html" aria-current="page"><img class="squiggle" src="nav-contact.png" alt="Contact" style="--w:269"></a>
+  </nav>
+</header>
+<main>
+<h1>Contact</h1>
+<p>The best way to reach me is by email. I'm based in the New York area and happy to talk about producing, booking, music, or cartoons.</p>
+<p class="bigline" id="email-text">wdmenjivar@gmail.com</p>
+<div class="copyrow">
+  <button class="btn" id="copy-email" type="button">Copy my email</button>
+  <span class="toast" id="toast" role="status" aria-live="polite"></span>
+</div>
+</main>
+</div>
+<script>
+{
+  const btn = document.getElementById('copy-email');
+  const toast = document.getElementById('toast');
+  const sel = () => { try { const r = document.createRange(); r.selectNodeContents(document.getElementById('email-text')); const s = getSelection(); s.removeAllRanges(); s.addRange(r); } catch (e) {} };
+  btn.addEventListener('click', () => {
+    const ok = () => { toast.textContent = 'Copied!'; };
+    const no = () => { sel(); toast.textContent = 'Selected. Press copy to grab it.'; };
+    try { navigator.clipboard.writeText('wdmenjivar@gmail.com').then(ok, no); } catch (e) { no(); }
+  });
+}
+</script>
+</body>
+</html>
